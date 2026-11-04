@@ -4,48 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b1220">
-  <meta name="description" content="GEROT — Gestão de Pessoas">
-  <title>GEROT — Gestão de Pessoas</title>
-  <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="icon" href="./icons/gerot-192.png" type="image/png">
-  <link rel="apple-touch-icon" href="./icons/gerot-192.png">
+  <title>GEROT</title>
   <style>
-    :root { color-scheme: dark; --bg:#0b1220; --panel:#111c30; --line:#263650; --text:#eef4ff; --muted:#a9b8cf; --accent:#3169ad; }
-    * { box-sizing:border-box; }
-    html,body { width:100%; height:100%; margin:0; overflow:hidden; background:var(--bg); color:var(--text); font-family:Arial,Helvetica,sans-serif; }
-    .app { width:100%; height:100%; display:flex; flex-direction:column; }
-    .topbar { height:42px; min-height:42px; display:flex; align-items:center; gap:10px; padding:0 14px; background:#101b2d; border-bottom:1px solid var(--line); }
-    .brand { display:flex; align-items:center; gap:9px; font-weight:700; letter-spacing:.08em; font-size:13px; }
-    .brand-mark { width:25px; height:25px; border-radius:8px; display:grid; place-items:center; background:linear-gradient(145deg,#397bc4,#173d70); font-weight:800; }
-    .status { margin-left:auto; color:var(--muted); font-size:11px; }
-    .open-link { color:#d9e9ff; font-size:11px; text-decoration:none; border:1px solid #344966; padding:6px 9px; border-radius:7px; }
-    .frame-wrap { position:relative; flex:1; min-height:0; background:var(--bg); }
-    iframe { display:block; width:100%; height:100%; border:0; background:var(--bg); }
-    .hint { position:absolute; z-index:2; left:50%; top:16px; transform:translateX(-50%); max-width:calc(100% - 32px); padding:9px 13px; border:1px solid var(--line); border-radius:9px; background:#101b2df2; color:var(--muted); font-size:12px; text-align:center; box-shadow:0 8px 24px #0005; }
-    @media (max-width:650px) { .topbar { height:38px; min-height:38px; padding:0 9px; } .status { display:none; } }
+    * { box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #0b1220;
+    }
+    #gerot-app {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <main class="app">
-    <header class="topbar">
-      <div class="brand"><span class="brand-mark">G</span><span>GEROT</span></div>
-      <span class="status">Gestão de Pessoas</span>
-      <a class="open-link" href="https://script.google.com/macros/s/AKfycbw_n0vZ0-r5SvcOt0qTxEf23kvgF8BRFUbxxiokMjwCjKJsngidQ-gNZchwGv6u1a30/exec" target="_blank" rel="noopener">Abrir em nova aba ↗</a>
-    </header>
-    <section class="frame-wrap" aria-label="Sistema GEROT">
-      <div class="hint" id="hint">Carregando GEROT… Se não abrir, use “Abrir em nova aba”.</div>
-      <iframe id="gerot" title="GEROT — Gestão de Pessoas" src="https://script.google.com/macros/s/AKfycbw_n0vZ0-r5SvcOt0qTxEf23kvgF8BRFUbxxiokMjwCjKJsngidQ-gNZchwGv6u1a30/exec?embedded=true" allow="clipboard-read; clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </section>
-  </main>
-  <script>
-    const frame = document.getElementById('gerot');
-    const hint = document.getElementById('hint');
-    frame.addEventListener('load', () => { hint.style.display = 'none'; });
-    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
-    }
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); deferredPrompt = event; });
-  </script>
+  <iframe
+    id="gerot-app"
+    src="https://script.google.com/macros/s/AKfycbw_n0vZ0-r5SvcOt0qTxEf23kvgF8BRFUbxxiokMjwCjKJsngidQ-gNZchwGv6u1a30/exec?embedded=true"
+    title="GEROT — Gestão de Pessoas"
+    allow="clipboard-read; clipboard-write"
+    allowfullscreen>
+  </iframe>
 </body>
 </html>
