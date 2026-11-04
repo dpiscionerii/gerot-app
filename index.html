@@ -1997,7 +1997,11 @@ const gerotBridgePending=new Map();
 let gerotBridgeSequence=0;
 gerotBridgeFrame.addEventListener('load',()=>{gerotBridgeIsReady=true;gerotBridgeReadyResolve();});
 window.addEventListener('message',event=>{
- if(event.source!==gerotBridgeFrame.contentWindow)return;
+ // Apps Script pode redirecionar o iframe para um subdomínio script.googleusercontent.com.
+ // A janela interna pode não ser o contentWindow externo do iframe; valide a origem Google
+ // e correlacione cada resposta pelo ID imprevisível da chamada pendente.
+ if(!/^https:\/\/(?:[a-z0-9-]+\.)*script\.googleusercontent\.com$/i.test(event.origin)
+    && event.origin!=='https://script.google.com')return;
  const msg=event.data||{};
  if(msg.type==='GEROT_BRIDGE_READY'){gerotBridgeIsReady=true;gerotBridgeReadyResolve();return;}
  if(msg.type!=='GEROT_RPC_RESULT'||!msg.id)return;
