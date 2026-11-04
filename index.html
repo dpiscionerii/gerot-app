@@ -1975,7 +1975,7 @@ html:not([data-theme="dark"]) main,
 html:not([data-theme="dark"]) .content {
   background:transparent!important;
 }
-</style><script>(function(){var theme='light';try{theme=localStorage.getItem('gerot-theme')==='dark'?'dark':'light'}catch(e){}document.documentElement.dataset.theme=theme;})();</script><body><section id="pinGate"><form id="pinForm" class="card"><div class="eyebrow">GEROT · ACESSO PRIVADO</div><button type="button" id="loginThemeToggle" aria-label="Alternar tema" title="Alternar modo claro e escuro"><span class="theme-icon" aria-hidden="true">◐</span><span id="loginThemeLabel">Modo claro</span></button><h1>Bem-vindo ao GEROT</h1><p>Acesse seu ambiente de gestão de pessoas.</p><label for="loginPerson">Selecione seu nome</label><select id="loginPerson" autocomplete="username" required><option value="">Escolha seu nome</option><option value="piscioneriandrei@gmail.com">Andrei</option><option value="andressaarmiliato@gmail.com">Andressa</option><option value="vanessa.venancio5212@gmail.com">Vanessa</option><option value="mayerlidiane@gmail.com">Lidiane</option></select><label for="loginPin">PIN de acesso</label><input id="loginPin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" maxlength="8" autocomplete="current-password" required placeholder="Digite seu PIN (padrão: 2026)"><p id="pinStatus" role="status"></p><button id="pinSubmit" class="primary">Entrar no GEROT →</button><button type="button" id="togglePinChange" class="secondary" style="width:100%;margin-top:10px">Alterar meu PIN</button><div id="pinChangePanel" hidden style="margin-top:14px;padding-top:14px;border-top:1px solid var(--line)"><label for="currentPin">PIN atual</label><input id="currentPin" type="password" inputmode="numeric" maxlength="8" placeholder="PIN atual"><label for="newPin">Novo PIN (4 a 8 números)</label><input id="newPin" type="password" inputmode="numeric" maxlength="8" placeholder="Novo PIN"><label for="confirmPin">Confirmar novo PIN</label><input id="confirmPin" type="password" inputmode="numeric" maxlength="8" placeholder="Repita o novo PIN"><button type="button" id="savePinChange" class="primary" style="width:100%;margin-top:10px">Salvar novo PIN</button></div></form></section><div id="loadingGate"><div class="card"><div class="eyebrow">GEROT · GESTÃO DE PESSOAS</div><h1>Abrindo sua base de RH</h1><p id="loadingMessage">Preparando os registros salvos e os controles…</p><a href="#" onclick="location.reload();return false" id="reloadApp" hidden>Recarregar o GEROT</a></div></div><noscript>Ative o JavaScript no navegador para utilizar os controles.</noscript><aside><button type="button" id="sidebarToggle" class="sidebar-toggle" aria-label="Recolher menu" title="Recolher menu"><span aria-hidden="true">‹</span></button><nav><button data-view="dashboard" class="active">◫ &nbsp; Visão geral</button><button data-view="admissions">↗ &nbsp; Admissões</button><button data-view="departures">↘ &nbsp; Desligamentos</button><button data-view="base">▦ &nbsp; Base mensal</button><button data-view="occurrences">◷ &nbsp; Atestados e atrasos</button><button data-view="employees">♙ &nbsp; Colaboradores</button><button type="button" id="tutorialNav">ⓘ &nbsp; Tutorial</button></nav><div class="sidefoot"><b>Grupo Fredy</b><p>22 unidades · Recursos Humanos</p><span class="dot"></span> Acesso privado</div></aside><main><header><span class="header-title">Gestão de Pessoas</span><button id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Modo escuro" title="Alternar modo claro e escuro"><span aria-hidden="true" class="theme-icon">◐</span><span id="themeLabel">Modo claro</span><span class="switch-track" aria-hidden="true"><span></span></span></button></header><section class="content"><div class="titlebar"><div><div class="content-brand"><span class="content-brand-mark">G</span><span>GEROT</span></div><div class="eyebrow">CONTROLE DE RH</div><h1 id="title">Visão geral</h1><p id="subtitle">Pessoas, movimentos e indicadores em um só lugar.</p></div><button class="primary" id="new">Novo registro</button></div><div class="filters"><label>PERÍODO<select id="month"></select></label><label>ANO<select id="year"></select></label><label>UNIDADE<select id="unit"></select></label><div class="filterend"><button id="export">Exportar CSV</button></div></div><p id="dataSummary" class="datasummary"></p><div id="cloudStatus" class="syncnotice">Conectando à base compartilhada…</div><div id="dashboard"></div><div id="absencePanel" hidden></div><div id="records" hidden><div class="card"><div class="cardhead"><h2 id="listtitle"></h2><input id="search" placeholder="Buscar nome, cargo ou unidade" aria-label="Buscar registros"></div><label id="allAdmissionsLabel" class="allrecords"><input type="checkbox" id="allAdmissions" checked> Mostrar todos os períodos, incluindo registros sem data</label><div class="tablewrap"><table id="recordtable"></table></div><p class="hint" id="count"></p></div></div><footer><details class="backup-options"><summary>Backup e restauração</summary><div><button id="backup">Salvar backup</button><button id="restore">Restaurar backup</button><input hidden id="file" type="file" accept="application/json"></div></details></footer></section></main><dialog id="modal"><form id="form"><div class="cardhead"><div><span class="eyebrow">CONTROLE DE RH</span><h2 id="modalTitle">Novo registro</h2></div><button type="button" id="close" aria-label="Fechar">✕</button></div><div id="fields"></div><div class="actions"><button type="button" id="delete" class="danger">Excluir registro</button><button class="primary" type="submit">Salvar registro</button></div></form></dialog>
+</style><script>(function(){var theme='light';try{theme=localStorage.getItem('gerot-theme')==='dark'?'dark':'light'}catch(e){}document.documentElement.dataset.theme=theme;})();</script><body><section id="pinGate"><form id="pinForm" class="card"><div class="eyebrow">GEROT · ACESSO PRIVADO</div><button type="button" id="loginThemeToggle" aria-label="Alternar tema" title="Alternar modo claro e escuro"><span class="theme-icon" aria-hidden="true">◐</span><span id="loginThemeLabel">Modo claro</span></button><h1>Bem-vindo ao GEROT</h1><p>Acesse seu ambiente de gestão de pessoas.</p><label for="loginPerson">Selecione seu nome</label><select id="loginPerson" autocomplete="username" required><option value="">Escolha seu nome</option><option value="piscioneriandrei@gmail.com">Andrei</option><option value="andressaarmiliato@gmail.com">Andressa</option><option value="vanessa.venancio5212@gmail.com">Vanessa</option><option value="mayerlidiane@gmail.com">Lidiane</option></select><label for="loginPassword">PIN de acesso</label><input id="loginPassword" type="password" inputmode="numeric" maxlength="6" autocomplete="off" required placeholder="Digite seu PIN"><p id="pinStatus" role="status"></p><button id="pinSubmit" class="primary">Entrar no GEROT →</button></form></section><div id="loadingGate"><div class="card"><div class="eyebrow">GEROT · GESTÃO DE PESSOAS</div><h1>Abrindo sua base de RH</h1><p id="loadingMessage">Preparando os registros salvos e os controles…</p><a href="#" onclick="location.reload();return false" id="reloadApp" hidden>Recarregar o GEROT</a></div></div><noscript>Ative o JavaScript no navegador para utilizar os controles.</noscript><aside><button type="button" id="sidebarToggle" class="sidebar-toggle" aria-label="Recolher menu" title="Recolher menu"><span aria-hidden="true">‹</span></button><nav><button data-view="dashboard" class="active">◫ &nbsp; Visão geral</button><button data-view="admissions">↗ &nbsp; Admissões</button><button data-view="departures">↘ &nbsp; Desligamentos</button><button data-view="base">▦ &nbsp; Base mensal</button><button data-view="occurrences">◷ &nbsp; Atestados e atrasos</button><button data-view="employees">♙ &nbsp; Colaboradores</button><button type="button" id="tutorialNav">ⓘ &nbsp; Tutorial</button></nav><div class="sidefoot"><b>Grupo Fredy</b><p>22 unidades · Recursos Humanos</p><span class="dot"></span> Acesso privado</div></aside><main><header><span class="header-title">Gestão de Pessoas</span><button id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Modo escuro" title="Alternar modo claro e escuro"><span aria-hidden="true" class="theme-icon">◐</span><span id="themeLabel">Modo claro</span><span class="switch-track" aria-hidden="true"><span></span></span></button></header><section class="content"><div class="titlebar"><div><div class="content-brand"><span class="content-brand-mark">G</span><span>GEROT</span></div><div class="eyebrow">CONTROLE DE RH</div><h1 id="title">Visão geral</h1><p id="subtitle">Pessoas, movimentos e indicadores em um só lugar.</p></div><button class="primary" id="new">Novo registro</button></div><div class="filters"><label>PERÍODO<select id="month"></select></label><label>ANO<select id="year"></select></label><label>UNIDADE<select id="unit"></select></label><div class="filterend"><button id="export">Exportar CSV</button></div></div><p id="dataSummary" class="datasummary"></p><div id="cloudStatus" class="syncnotice">Conectando à base compartilhada…</div><div id="dashboard"></div><div id="absencePanel" hidden></div><div id="records" hidden><div class="card"><div class="cardhead"><h2 id="listtitle"></h2><input id="search" placeholder="Buscar nome, cargo ou unidade" aria-label="Buscar registros"></div><label id="allAdmissionsLabel" class="allrecords"><input type="checkbox" id="allAdmissions" checked> Mostrar todos os períodos, incluindo registros sem data</label><div class="tablewrap"><table id="recordtable"></table></div><p class="hint" id="count"></p></div></div><footer><details class="backup-options"><summary>Backup e restauração</summary><div><button id="backup">Salvar backup</button><button id="restore">Restaurar backup</button><input hidden id="file" type="file" accept="application/json"></div></details></footer></section></main><dialog id="modal"><form id="form"><div class="cardhead"><div><span class="eyebrow">CONTROLE DE RH</span><h2 id="modalTitle">Novo registro</h2></div><button type="button" id="close" aria-label="Fechar">✕</button></div><div id="fields"></div><div class="actions"><button type="button" id="delete" class="danger">Excluir registro</button><button class="primary" type="submit">Salvar registro</button></div></form></dialog>
 <dialog id="gerotConfirmDialog" class="gerot-confirm">
  <div class="gerot-confirm-body">
   <div class="gerot-confirm-icon">?</div>
@@ -2188,34 +2188,40 @@ document.addEventListener('DOMContentLoaded',()=>{
  $('#pinForm').onsubmit=e=>{
   e.preventDefault();
   const email=$('#loginPerson').value;
-  const pin=$('#loginPin').value;
+  const password=$('#loginPassword').value;
   if(!email){$('#pinStatus').textContent='Selecione seu nome para continuar.';return;}
-  if(!/^\d{4,8}$/.test(pin)){$('#pinStatus').textContent='Digite um PIN de 4 a 8 números.';return;}
-  $('#pinSubmit').disabled=true;$('#pinStatus').textContent='Validando PIN…';
+  if(!password){$('#pinStatus').textContent='Digite sua senha.';return;}
+  $('#pinSubmit').disabled=true;
+  $('#pinStatus').textContent='Validando acesso…';
+  let loginFinished=false;
+  const loginTimeout=setTimeout(()=>{
+   if(loginFinished)return;
+   loginFinished=true;
+   $('#pinStatus').textContent='O servidor demorou para responder. Confira sua conexão e tente novamente.';
+   $('#pinSubmit').disabled=false;
+  },15000);
   google.script.run.withSuccessHandler(result=>{
-   gerotToken=result.token;$('#loginPin').value='';$('#pinGate').hidden=true;gerotResolvePin();
+   if(loginFinished)return;
+   loginFinished=true;
+   clearTimeout(loginTimeout);
+   if(!result||!result.token){
+    $('#pinStatus').textContent='O servidor não confirmou o acesso. Tente novamente.';
+    $('#pinSubmit').disabled=false;
+    return;
+   }
+   gerotToken=result.token;
+   $('#loginPassword').value='';
+   $('#pinGate').hidden=true;
+   gerotResolvePin();
   }).withFailureHandler(error=>{
-   $('#pinStatus').textContent=error.message||'Não foi possível entrar.';
-   $('#loginPin').value='';$('#loginPin').focus();$('#pinSubmit').disabled=false;
-  }).entrarComSenhaGerot({email:email,pin:pin});
- };
- $('#togglePinChange').onclick=()=>{
-  const panel=$('#pinChangePanel');panel.hidden=!panel.hidden;
-  $('#pinStatus').textContent='';
-  if(!panel.hidden)$('#currentPin').focus();
- };
- $('#savePinChange').onclick=()=>{
-  const email=$('#loginPerson').value,currentPin=$('#currentPin').value,newPin=$('#newPin').value,confirmPin=$('#confirmPin').value;
-  if(!email){$('#pinStatus').textContent='Selecione seu nome antes de alterar o PIN.';return;}
-  if(!/^\d{4,8}$/.test(newPin)){$('#pinStatus').textContent='O novo PIN deve ter de 4 a 8 números.';return;}
-  $('#savePinChange').disabled=true;$('#pinStatus').textContent='Atualizando PIN…';
-  google.script.run.withSuccessHandler(()=>{
-   $('#pinStatus').textContent='PIN alterado com sucesso. Use o novo PIN no próximo acesso.';
-   $('#currentPin').value='';$('#newPin').value='';$('#confirmPin').value='';$('#loginPin').value='';
-   $('#pinChangePanel').hidden=true;$('#savePinChange').disabled=false;
-  }).withFailureHandler(error=>{
-   $('#pinStatus').textContent=error.message||'Não foi possível alterar o PIN.';$('#savePinChange').disabled=false;
-  }).alterarPinGerot({email:email,currentPin:currentPin,newPin:newPin,confirmPin:confirmPin});
+   if(loginFinished)return;
+   loginFinished=true;
+   clearTimeout(loginTimeout);
+   $('#pinStatus').textContent=(error&&error.message)||'Não foi possível validar o acesso.';
+   $('#loginPassword').value='';
+   $('#loginPassword').focus();
+   $('#pinSubmit').disabled=false;
+  }).entrarComSenhaGerot({email:email,password:password});
  };
 });
 const gerotRenderAligned=render;render=function(){gerotRenderAligned();document.querySelectorAll('table tbody td').forEach(td=>{if(/^([−+\-]?\d[\d., ]*%?|Sem dados|—)$/.test(td.textContent.trim()))td.classList.add('numeric');});};
@@ -2446,8 +2452,8 @@ const gerotThemeMeta=document.querySelector('meta[name="theme-color"]');new Muta
 #pinGate .card{border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 65px var(--color-44);text-align:left}
 #pinGate .eyebrow:before{content:"G";display:inline-grid;place-items:center;width:34px;height:34px;margin-right:10px;border-radius:10px;background:var(--sidebar-active);color:var(--ink);font-size:18px}
 #pinGate h1{font-size:29px;letter-spacing:-1.1px;margin-top:26px}
-#pinGate select,#loginPin{width:100%;margin:10px 0 14px;border-radius:12px}
-#loginPin{background:var(--color-5);color:var(--ink)}
+#pinGate select,#loginPassword{width:100%;margin:10px 0 14px;border-radius:12px}
+#loginPassword{background:var(--color-5);color:var(--ink)}
 #pinInput{border-radius:12px;border:1px solid var(--line);background:var(--color-6);letter-spacing:10px;text-align:center;font-size:22px}
 #pinSubmit{width:100%;margin-top:10px}
 #pinGate .primary{background:var(--green);border-color:var(--green);color:#fff}
@@ -2781,8 +2787,4 @@ document.addEventListener('DOMContentLoaded',()=>{
 })();
 
 </script>
-<style>html,body{margin:0!important;padding:0!important;border:0!important;outline:0!important}body{border-top:0!important}body>*:first-child{border-top:0!important;outline:0!important}
-/* GEROT — remove filete/margem residual no topo da página */
-html,body{margin:0!important;padding:0!important;border-top:0!important}
-body::before,body::after{border-top:0!important;box-shadow:none!important}
-</style></body></html>
+</body></html>
