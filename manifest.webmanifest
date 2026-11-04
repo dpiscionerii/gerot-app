@@ -1,8 +1,8 @@
 {
   "id": "/gerot-app/",
-  "name": "GEROT — Gestão de Pessoas",
+  "name": "GEROT",
   "short_name": "GEROT",
-  "description": "Sistema de gestão de pessoas GEROT.",
+  "description": "GEROT",
   "lang": "pt-BR",
   "start_url": "/gerot-app/",
   "scope": "/gerot-app/",
